@@ -44,7 +44,9 @@ export default function GameBorad({
     }
 
     if (draw) {
-      setWon("draw");
+      setWon((prevData) => {
+        return prevData === null ? "draw" : prevData;
+      });
     }
   };
 
